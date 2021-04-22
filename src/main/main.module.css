@@ -1,0 +1,47 @@
+main {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat_nav {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.cat_list {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+
+    background-color: #ffaaccaa;
+    border-radius:  10px;
+}
+
+.cat_list li {
+    margin-right: 10px;
+
+    font-size: 25px;
+}
+
+.cat_list li a {
+    padding: 10px;
+    border-radius:  10px;
+    color: white;
+    text-decoration: none;
+}
+
+.cat_list li a:hover {
+    background-color: rgb(192, 192, 192);
+    color: black;
+}
+
+.cat_list li a:focus {
+    background-color: rgb(192, 192, 192);
+    color: black;
+}

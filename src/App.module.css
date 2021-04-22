@@ -1,0 +1,64 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+
+  background-image: url('../src/bg_image1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+header {
+  height: 80px;
+}
+
+footer {
+  height: 20%;
+}
+
+.menu_nav {
+  height: inherit;
+  background-color: #ddd;
+}
+
+.menu_list {
+  padding: 0px;
+  margin: 0px;
+  height: inherit;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  list-style: none;
+}
+
+.menu_list li {
+  margin: 0px;
+
+  display: flex;
+  flex-grow: 1;
+
+  font-size: 30px;
+}
+
+.menu_list li a {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: white;
+}
+
+.menu_list li a:hover {
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
+
+.menu_list li a:focus {
+  background-color: rgb(192, 192, 192);
+  color: black;
+}
