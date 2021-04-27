@@ -5,12 +5,27 @@ import AboutPage from './About/AboutPage';
 import MainPage from './main/MainPage';
 import PostPage from './Post/PostPage';
 import app from './App.module.css';
+import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /*  className={app.menubar}*/
 function App() {
   return (
     <div>
       <Router>
         <header>
+          <nav className={app.blog_header}>
+            <div className={app.blog_nav}>
+              <button className={app.setting_btn}>
+                <FontAwesomeIcon icon={faBars} className={app.setting_icon}/>
+              </button>
+            </div>
+            <div className={app.search}>
+              <input type="text" className={app.search_bar} placeholder="검색"/>
+              <button className={app.search_btn}>
+              <FontAwesomeIcon icon={faSearch} className={app.search_icon}/>
+              </button>
+            </div>
+          </nav>
           <nav className={app.menu_nav}>
             <ul className={app.menu_list}>
               <li>

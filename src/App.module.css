@@ -17,7 +17,54 @@ footer {
   height: 20%;
 }
 
+.blog_header {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  justify-content: space-between;
+}
+
+.blog_nav {
+  margin: 10px;
+}
+
+.setting_btn {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.setting_icon {
+  font-size: 25px;
+  margin: 5px;
+}
+
+.search {
+  display: flex;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.search_bar {
+  border-radius: 10px;
+}
+
+.search_btn {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.search_icon {
+  font-size: 20px;
+}
+
 .menu_nav {
+  margin-top: 75px;
   height: inherit;
   background-color: #ddd;
 }
