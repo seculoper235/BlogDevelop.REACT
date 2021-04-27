@@ -37,11 +37,11 @@ main {
 }
 
 .cat_list li a:hover {
-    background-color: rgb(192, 192, 192);
+    background-color: #ffaaccaa;
     color: black;
 }
 
 .cat_list li a:focus {
-    background-color: rgb(192, 192, 192);
+    background-color: #ff88ccaa;
     color: black;
 }
