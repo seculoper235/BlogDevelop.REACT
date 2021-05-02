@@ -1,16 +1,17 @@
 html, body {
   display: flex;
   flex-direction: column;
-
-  background-image: url('../src/bg_image1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
+  background-color: #00000008;
 }
 
 header {
-  height: 80px;
+  height: 52em;
+  padding-top: 30px;
+  background-image: url('../src/bg_image1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center top;
+  background-attachment: local;
 }
 
 footer {
@@ -18,12 +19,15 @@ footer {
 }
 
 .blog_header {
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   justify-content: space-between;
+  background-color: #00000033;
 }
 
 .blog_nav {
@@ -38,7 +42,7 @@ footer {
 }
 
 .setting_icon {
-  font-size: 25px;
+  font-size: 30px;
   margin: 5px;
 }
 
@@ -56,17 +60,44 @@ footer {
   border: none;
   outline: none;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .search_icon {
   font-size: 20px;
 }
 
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.profile_btn {
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: gray;
+  background-image: url('../src/Black.png');
+  width: 6rem;
+  height: 6rem;
+}
+
+.profile_name {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.profile_name a {
+  text-decoration: none;
+  color: black;
+}
+
 .menu_nav {
-  margin-top: 75px;
+  margin-top: 30px;
   height: inherit;
-  background-color: #ddd;
+  background-color: #ffffff00;
 }
 
 .menu_list {
