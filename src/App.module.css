@@ -95,7 +95,7 @@ footer {
 }
 
 .menu_nav {
-  margin-top: 30px;
+  margin-top: 5rem;
   height: inherit;
   background-color: #ffffff00;
 }
@@ -123,20 +123,34 @@ footer {
 
 .menu_list li a {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
 
   text-decoration: none;
-  color: white;
-}
-
-.menu_list li a:hover {
-  background-color: rgb(192, 192, 192);
   color: black;
 }
 
-.menu_list li a:focus {
-  background-color: rgb(192, 192, 192);
-  color: black;
+.menu_list li a::after {
+  content: "";
+  position: relative;
+  left: 0;
+  bottom: -10px;
+  width: 0px;
+  height: 3px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.3s;
+  opacity: 0;
+  background-color: black;
+}
+.menu_list li a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.menu_list li a:focus:after {
+  width: 100%;
+  opacity: 1;
 }
