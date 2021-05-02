@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch, Link, NavLink} from 'react-router-dom';
 import AboutPage from './About/AboutPage';
 import MainPage from './main/MainPage';
-import PostPage from './Post/PostPage';
 import app from './App.module.css';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,30 +25,30 @@ function App() {
               </button>
             </div>
           </nav>
-          <nav className={app.menu_nav}>
+        </header>
+        <div className={app.profile}>
+          <button className={app.profile_btn} />
+          <span className={app.profile_name}>
+            <Link to="/">핑핑의 블로그</Link>
+          </span>
+        </div>
+        <nav className={app.menu_nav}>
             <ul className={app.menu_list}>
               <li>
-                <Link className={app.menu_item} to="/">Home</Link>
+                <Link to="/">소개</Link>
               </li>
               <li>
-                <Link to="/post">Post</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
+                <Link to="/post">포스트</Link>
               </li>
             </ul>
           </nav>
-        </header>
 
         <Switch>
           <Route exact path="/">
-            <MainPage />
+            <AboutPage />
           </Route>
           <Route path="/post">
-            <PostPage />
-          </Route>
-          <Route path="/about">
-            <AboutPage />
+            <MainPage />
           </Route>
         </Switch>
 
