@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch, Link, NavLink} from 'react-router-dom';
 import AboutPage from './About/AboutPage';
 import MainPage from './main/MainPage';
+import LoginPage from './Login/LoginPage';
 import app from './App.module.css';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PopupDom from './Login/PopupDom';
 /*  className={app.menubar}*/
 function App() {
+  const [isPopup, setisPopup] = useState(false)
+
+  const onPopup = () => {
+    setisPopup(true)
+  };
+  const closePopup = () => {
+    setisPopup(false)
+  };
   return (
     <div>
       <Router>
@@ -23,6 +33,14 @@ function App() {
               <button className={app.search_btn}>
               <FontAwesomeIcon icon={faSearch} className={app.search_icon}/>
               </button>
+              <button id="pop" className={app.login_btn} onClick={onPopup}>
+                로그인
+              </button>
+              {isPopup &&
+                  <PopupDom>
+                    <LoginPage onClose={closePopup} />
+                  </PopupDom>
+              }
             </div>
           </nav>
         </header>
@@ -49,6 +67,9 @@ function App() {
           </Route>
           <Route path="/post">
             <MainPage />
+          </Route>
+          <Route path="/login">
+            <LoginPage />
           </Route>
         </Switch>
 
