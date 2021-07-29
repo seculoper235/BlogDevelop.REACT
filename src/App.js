@@ -10,13 +10,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PopupDom from './Login/PopupDom';
 /*  className={app.menubar}*/
 function App() {
-  const [isPopup, setisPopup] = useState(false)
+  const [IsPopup, setIsPopup] = useState(false)
 
   const onPopup = () => {
-    setisPopup(true)
+    setIsPopup(true)
   };
   const closePopup = () => {
-    setisPopup(false)
+    setIsPopup(false)
   };
   return (
     <div>
@@ -36,7 +36,7 @@ function App() {
               <button id="pop" className={app.login_btn} onClick={onPopup}>
                 로그인
               </button>
-              {isPopup &&
+              {IsPopup &&
                   <PopupDom>
                     <LoginPage onClose={closePopup} />
                   </PopupDom>

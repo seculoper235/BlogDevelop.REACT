@@ -1,6 +1,35 @@
-.dimmed_layer_wrapper .full_layer {
+.login_header {
+    text-align: center;
+}
+.login_content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /border: black solid 1px;
+}
+.login_content>label {
+    /border: red solid 1px;
+    margin: 1em 3em 3em 3em;
+}
+.login_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.login_btn {
+    border-radius: 50%;
+
+}
+.login_icon {
+    font-size: 2em;
+    width: 1em;
+    height: 1.5em;
+}
+
+.back_layer .fore_layer {
     overflow:hidden;
     position:fixed;
+    background-color: #00000099;
     top:0;
     right:0;
     bottom:0;
@@ -13,7 +42,6 @@
     font-size:0;
     display:inline-block;
     vertical-align:middle;
-    height:100%;
     content:'';
 }
 .common_alert{
@@ -21,17 +49,17 @@
     position:relative;
     display:inline-block;
     vertical-align:middle;
-    width:calc(100%-56px);
-    min-height: 200px;
+    width:calc(100% - 25em);
+    min-height: 50px;
     max-height:100%;
-    min-width: 200px;
-    background-color:yellowgreen;
+    max-width: 500px;
+    background-color:white;
     white-space:normal;
     word-break:break-word;
     text-align:left;
     border-radius:10px;
     padding:30px;
-    margin:auto;
+    margin-top: 5em;
     box-sizing:border-box;
     font-size: 16px;
 }
