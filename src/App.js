@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Switch, Link, NavLink} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import AboutPage from './About/AboutPage';
 import MainPage from './main/MainPage';
 import LoginPage from './Login/LoginPage';
@@ -8,6 +7,7 @@ import app from './App.module.css';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PopupDom from './Login/PopupDom';
+import UserRequest from "./Login/UserRequest";
 /*  className={app.menubar}*/
 function App() {
   const [IsPopup, setIsPopup] = useState(false)
@@ -64,6 +64,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <AboutPage />
+          </Route>
+          <Route path="/login/userinfo">
+            <UserRequest />
           </Route>
           <Route path="/post">
             <MainPage />
