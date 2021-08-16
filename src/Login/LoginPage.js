@@ -1,8 +1,10 @@
 import React from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faGoogle} from '@fortawesome/free-brands-svg-icons';
+import {Redirect} from "react-router-dom";
+import GoogleLogin from "react-google-login";
+import axios from "axios";
 
 import popup from './pop.module.css'
+
 
 function LoginHeader({title}) {
     return (
@@ -15,22 +17,37 @@ function SocialLogin() {
         <div className={popup.login_content}>
             <label>로그인을 해주세요!!</label>
             <div className={popup.login_list}>
-                <GoogleLogin />
-                <GoogleLogin />
-                <GoogleLogin />
+                <Google/>
+                <Google/>
+                <Google/>
             </div>
         </div>
     )
 }
 
-function GoogleLogin() {
+function Google() {
     return (
-        <button className={popup.login_btn} >
-            <a href="http://192.168.146.128:8080/authorize/google">
-                <FontAwesomeIcon icon={faGoogle} className={popup.login_icon} />
-            </a>
-        </button>
+        <GoogleLogin clientId="CLIENT_ID"
+                     buttonText="로그인"
+                     onSuccess={responseGoogle}
+                     cookiePolicy={'single_host_origin'}
+        />
     )
+}
+
+const responseGoogle = async (response) => {
+    alert(response.accessToken);
+
+    const oAuthHeader = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    const Server = await axios.post('SERVER_URL',
+        response.accessToken,
+        oAuthHeader);
+    alert(Server.data.nickName);
+    // TODO 유저 등록 페이지로 이동
 }
 
 function LoginPage({onClose}) {
