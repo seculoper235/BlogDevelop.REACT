@@ -47,7 +47,10 @@ const responseGoogle = async (response) => {
         response.accessToken,
         oAuthHeader);
     alert(Server.data.nickName);
-    // TODO 유저 등록 페이지로 이동
+    // 유저 등록 페이지로 이동
+    return (
+        window.location.replace("http://192.168.146.129:3000/login/userinfo")
+    )
 }
 
 function LoginPage({onClose}) {
